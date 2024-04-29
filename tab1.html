@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boletim</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  h2 {
+    color: #333;
+    text-align: center;
+  }
+  table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border: 2px solid #333;
+  }
+  th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #4100da;
+  }
+  th {
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  tr:last-child {
+    background-color: #ddd;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+<h2>Tabela de Disciplinas</h2>
+<table>
+  <tr>
+    <th>Disciplina</th>
+    <th>Ano</th>
+    <th>Nota</th>
+    <th>Frequência (%)</th>
+  </tr>
+  <tr>
+    <td>Desenvolvimento de Sistemas Web I</td>
+    <td>1</td>
+    <td>8.5</td>
+    <td>90</td>
+  </tr>
+  <tr>
+    <td>Desenvolvimento de Sistemas Web II</td>
+    <td>2</td>
+    <td>9.8</td>
+    <td>95</td>
+  </tr>
+  <tr>
+    <td>Desenvolvimento de Sistemas Web III</td>
+    <td>3</td>
+    <td>9.2</td>
+    <td>85</td>
+  </tr>
+  <tr>
+    <td colspan="2">Média</td>
+    <td id="media-notas"></td>
+    <td id="media-frequencia"></td>
+  </tr>
+</table>
+
+<script>
+  const notas = [8.5, 7.8, 9.2];
+  const frequencias = [90, 95, 85];
+  const mediaNotas = notas.reduce((acc, nota) => acc + nota, 0) / notas.length;
+  const mediaFrequencia = frequencias.reduce((acc, freq) => acc + freq, 0) / frequencias.length;
+
+  document.getElementById('media-notas').textContent = mediaNotas.toFixed(1);
+  document.getElementById('media-frequencia').textContent = mediaFrequencia.toFixed(1);
+</script>
+</body>
+</html>
