@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tabela de Trabalhos</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  h2 {
+    color: #333;
+    text-align: center;
+  }
+  table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border: 2px solid #333;
+  }
+  th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+  }
+  th {
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  .trabalho {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #2ecc71; /* Verde */
+    text-align: center;
+    width: 100%;
+  }
+  .grupoA {
+    background-color: #f87b6d; /* Vermelho */
+  }
+  .grupoB {
+    background-color: #7d86fd; /* Azul */
+  }
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+</style>
+</head>
+<body>
+<h2>Tabela de Trabalhos</h2>
+<table>
+  <tr>
+    <th class="trabalho" colspan="3">Trabalho</th>
+  </tr>
+  <tr>
+    <td rowspan="2" class="grupos">Grupos </td>
+    <td colspan="2">Notas</td>
+  </tr>
+  <tr>
+    <td>Aluno</td>
+    <td>Nota</td>
+  </tr>
+  <tr>
+    <td rowspan="3" class="grupoA">Grupo A</td>
+    <td>Aluno 1</td>
+    <td>8.5</td>
+  </tr>
+  <tr>
+    <td>Aluno 2</td>
+    <td>7.8</td>
+  </tr>
+  <tr>
+    <td>Aluno 3</td>
+    <td>9.2</td>
+  </tr>
+  <tr>
+    <td rowspan="3" class="grupoB">Grupo B</td>
+    <td>Aluno 4</td>
+    <td>7.5</td>
+  </tr>
+  <tr>
+    <td>Aluno 5</td>
+    <td>8.0</td>
+  </tr>
+  <tr>
+    <td>Aluno 6</td>
+    <td>6.8</td>
+  </tr>
+</table>
+</body>
+</html>
+
+
